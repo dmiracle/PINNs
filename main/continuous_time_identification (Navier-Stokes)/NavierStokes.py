@@ -14,12 +14,12 @@ import time
 from itertools import product, combinations
 from mpl_toolkits.mplot3d import Axes3D
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
-from plotting import newfig, savefig
+from matplotlib.figure import Figure
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 import matplotlib.gridspec as gridspec
 
 np.random.seed(1234)
-tf.set_random_seed(1234)
+tf.compat.v1.set_random_seed(1234)
 
 class PhysicsInformedNN:
     # Initialize the class
@@ -345,7 +345,7 @@ if __name__ == "__main__":
     box_lb = np.array([1.0, -2.0])
     box_ub = np.array([8.0, 2.0])
     
-    fig, ax = newfig(1.0, 1.2)
+    fig, ax = Figure.newfig(1.0, 1.2)
     ax.axis('off')
     
     ####### Row 0: Vorticity ##################    
@@ -424,7 +424,7 @@ if __name__ == "__main__":
     # savefig('./figures/NavierStokes_data') 
 
     
-    fig, ax = newfig(1.015, 0.8)
+    fig, ax = Figure.newfig(1.015, 0.8)
     ax.axis('off')
     
     ######## Row 2: Pressure #######################
