@@ -35,3 +35,13 @@ For more information, please refer to the following: (https://maziarraissi.githu
       journal={arXiv preprint arXiv:1711.10566},
       year={2017}
     }
+
+
+## Getting started
+
+Install venv, update pip, install reqs
+```
+python3 -m venv venv
+python3 -m pip install -U pip
+pip install -r requirements.txt
+```
